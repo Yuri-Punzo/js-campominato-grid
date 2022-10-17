@@ -18,25 +18,22 @@ function playCampoMinato() {
     const gameContainerSelection = document.querySelector(".game_container")
     for (let i = 1; i <= 100; i++) {
         const squareHtml = `<div class="square">${i}</div>`
-        console.log(squareHtml);
+        //console.log(squareHtml);
         gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
     }
 
-    function blueAndNumber() {
-        console.log("click");
+    const squares = document.querySelectorAll(".square")
+    //console.log(squares);
+    const squaresArray = squares;
+
+    for (const squares of squaresArray) {
+        //console.log(squares);
+        squares.addEventListener("click", blueAndNumber)
+
+        function blueAndNumber() {
+            console.log("click");
+            squares.classList.add("blue")
+        }
     }
-    
-    for (let i = 1; i <= 100; i++) {
-        const squares = document.querySelector(".square")
-        console.log(squares);
-        squares.addEventListener("click", blueAndNumber)        
-    }
-    
 }
-
-
-
-
-
-
 
