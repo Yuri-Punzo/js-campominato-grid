@@ -31,8 +31,9 @@ function playCampoMinato() {
         squares.addEventListener("click", blueAndNumber)
 
         function blueAndNumber() {
-            console.log("click");
+            //console.log("click");
             squares.classList.add("blue")
+            console.log(squares.textContent);
         }
     }
 }
