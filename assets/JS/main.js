@@ -27,7 +27,7 @@ function playCampoMinato() {
     }
     
     for (let i = 1; i <= 100; i++) {
-        const squares = document.querySelectorAll(".square")
+        const squares = document.querySelector(".square")
         console.log(squares);
         squares.addEventListener("click", blueAndNumber)        
     }
