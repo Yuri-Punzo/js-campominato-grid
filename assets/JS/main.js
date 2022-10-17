@@ -13,18 +13,30 @@ con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 
 */
 
 
-function playCampoMinato(){
+function playCampoMinato() {
     //al click del bottone vengono create 100 caselle numerate
-    const gameContainerSelection = document.querySelector("div.game_container")
-    for (let i = 1; i<=100; i++){
-        const squareHtml = `<div class="square">${[i]}</div>`
+    const gameContainerSelection = document.querySelector(".game_container")
+    for (let i = 1; i <= 100; i++) {
+        const squareHtml = `<div class="square">${i}</div>`
+        console.log(squareHtml);
         gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
     }
+
+    function blueAndNumber() {
+        console.log("click");
+    }
+    
+    for (let i = 1; i <= 100; i++) {
+        const squares = document.querySelectorAll(".square")
+        console.log(squares);
+        squares.addEventListener("click", blueAndNumber)        
+    }
+    
 }
 
-squaresSelection = document.querySelector(".square")
-squaresSelection.addEventListener("click", blueAndNumber)
 
-function blueAndNumber() {
-    console.log("click");
-}
+
+
+
+
+
