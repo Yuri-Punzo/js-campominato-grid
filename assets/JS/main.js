@@ -15,14 +15,30 @@ con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 
 
 function playCampoMinato() {
     //al click del bottone vengono create 100 caselle numerate
+    let optionSelector = document.querySelector("select").value
+    //console.log(optionSelector);
     const gameContainerSelection = document.querySelector(".game_container")
-    for (let i = 1; i <= 100; i++) {
-        const squareHtml = `<div class="square">${i}</div>`
-        //console.log(squareHtml);
-        gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
+    if (optionSelector === "dif_1") {
+        for (let i = 1; i <= 49; i++) {
+            const squareHtml = `<div class="square_7">${i}</div>`
+            //console.log(squareHtml);
+            gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
+        }
+    } else if (optionSelector === "dif_2") {
+        for (let i = 1; i <= 81; i++) {
+            const squareHtml = `<div class="square_9">${i}</div>`
+            //console.log(squareHtml);
+            gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
+        }
+    } else if (optionSelector === "dif_3") {
+        for (let i = 1; i <= 100; i++) {
+            const squareHtml = `<div class="square">${i}</div>`
+            //console.log(squareHtml);
+            gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
+        }
     }
 
-    const squares = document.querySelectorAll(".square")
+    const squares = document.querySelectorAll(".square, .square_9, .square_7")
     //console.log(squares);
     const squaresArray = squares;
 

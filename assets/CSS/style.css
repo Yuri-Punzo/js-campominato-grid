@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(36, 36, 36);
     color: white;
 }
@@ -30,9 +30,27 @@ body{
     width: calc((100% / 10) - 2px);
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .blue {
     background-color: lightskyblue;
+}
+
+.square_7 {
+    border: 2px solid white;
+    aspect-ratio: 1 / 1;
+    width: calc((100% / 7) - 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_9 {
+    border: 2px solid white;
+    aspect-ratio: 1 / 1;
+    width: calc((100% / 9) - 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
