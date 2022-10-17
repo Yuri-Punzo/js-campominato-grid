@@ -41,16 +41,27 @@ function playCampoMinato() {
     const squares = document.querySelectorAll(".square, .square_9, .square_7")
     //console.log(squares);
     const squaresArray = squares;
-
+    //VERSIONE CON FOR...OF
     for (const squares of squaresArray) {
         //console.log(squares);
         squares.addEventListener("click", blueAndNumber)
 
         function blueAndNumber() {
             //console.log("click");
-            squares.classList.add("blue")
+            squares.classList.toggle("blue")
             console.log(squares.textContent);
         }
     }
+    /* //VERSIONE SENZA FOR...
+    for (let i = 0; i < squares.length; i++) {
+        const square = squares[i]
+        //console.log(square);
+        square.addEventListener('click', blueAndNumber)
+
+        function blueAndNumber() {
+            square.classList.toggle('blue');
+            console.log(square.textContent);
+        }
+    } */
 }
 
