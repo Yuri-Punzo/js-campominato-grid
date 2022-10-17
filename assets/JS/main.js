@@ -11,3 +11,20 @@ con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 
 con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 */
+
+
+function playCampoMinato(){
+    //al click del bottone vengono create 100 caselle numerate
+    const gameContainerSelection = document.querySelector("div.game_container")
+    for (let i = 1; i<=100; i++){
+        const squareHtml = `<div class="square">${[i]}</div>`
+        gameContainerSelection.insertAdjacentHTML("beforeend", squareHtml)
+    }
+}
+
+squaresSelection = document.querySelector(".square")
+squaresSelection.addEventListener("click", blueAndNumber)
+
+function blueAndNumber() {
+    console.log("click");
+}
